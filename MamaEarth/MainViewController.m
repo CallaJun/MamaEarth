@@ -7,16 +7,20 @@
 //
 
 #import "MainViewController.h"
+#import "Weather.h"
 
 @interface MainViewController ()
 
 @end
 
-@implementation MainViewController
+@implementation MainViewController {
+    Weather *theWeather;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    theWeather = [[Weather alloc] init];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -66,8 +70,46 @@
 }
 
 - (IBAction)tellMePressediPad:(id)sender {
+    [theWeather getCurrent:self.locationTextFieldiPad.text];
+    
+    NSString *report = [NSString stringWithFormat:
+                        @"Weather in %@:\n"
+                        @"%@\n"
+                        @"Current temp.: %2.1f C\n"
+                        @"High: %2.1f C\n"
+                        @"Low: %2.1f C\n",
+                        theWeather.city,
+                        theWeather.conditions[0][@"description"],
+                        theWeather.tempCurrent,
+                        theWeather.tempMax,
+                        theWeather.tempMin
+                        ];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Weather"
+                                                    message:report
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
-
 - (IBAction)tellMePressediPhone:(id)sender {
-}
-@end
+    [theWeather getCurrent:self.locationTextFieldiPhone.text];
+    
+    NSString *report = [NSString stringWithFormat:
+                        @"Weather in %@:\n"
+                        @"%@\n"
+                        @"Current temp.: %2.1f C\n"
+                        @"High: %2.1f C\n"
+                        @"Low: %2.1f C\n",
+                        theWeather.city,
+                        theWeather.conditions[0][@"description"],
+                        theWeather.tempCurrent,
+                        theWeather.tempMax,
+                        theWeather.tempMin
+                        ];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Current Weather"
+                                                    message:report
+                                                   delegate:nil
+                                          cancelButtonTitle:@"OK"
+                                          otherButtonTitles:nil];
+    [alert show];
+}@end
