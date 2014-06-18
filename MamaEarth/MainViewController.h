@@ -15,5 +15,5 @@
 @property (weak, nonatomic) IBOutlet UITextField *locationTextFieldiPhone;
 - (IBAction)tellMePressediPad:(id)sender;
 - (IBAction)tellMePressediPhone:(id)sender;
-
+-(IBAction)textFieldReturn:(id)sender;
 @end
