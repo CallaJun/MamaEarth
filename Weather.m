@@ -8,6 +8,7 @@
 
 #import "Weather.h"
 #import "AFNetworking.h"
+#import <AFNetworking/AFHTTPRequestOperationManager.h>
 
 @implementation Weather {
     NSDictionary *weatherServiceResponse;
@@ -31,7 +32,13 @@
     NSURL *weatherURL = [NSURL URLWithString:weatherURLText];
     NSURLRequest *weatherRequest = [NSURLRequest requestWithURL:weatherURL];
     
-    AFHTTPRequestOperation *operation =
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:weatherRequest];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [operation start];
+}
+    
+    /*AFHTTPRequestOperation *operation =
     [AFHTTPRequestOperation JSONRequestOperationWithRequest:weatherRequest
                                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
                                                         weatherServiceResponse = (NSDictionary *)JSON;
@@ -43,7 +50,7 @@
      ];
     
     [operation start];
-}
+}*/
 
 - (void)parseWeatherServiceResponse
 {
