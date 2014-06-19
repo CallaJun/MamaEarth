@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>680F905D-98C1-44A4-9170-CEA752F9998C</string>
+	<string>299B7669-2C84-4C5E-B0DA-EC1FE6B6D614</string>
 	<key>IDESourceControlProjectName</key>
 	<string>MamaEarth</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>1DA82390-0992-4EF5-81A7-E4BDB01F4651</key>
+		<key>AF79408B-314A-4D99-AB6C-75A7DC311738</key>
 		<string>https://github.com/CallaJun/MamaEarth.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MamaEarth.xcworkspace</string>
+	<string>MamaEarth.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1DA82390-0992-4EF5-81A7-E4BDB01F4651</key>
-		<string>..</string>
+		<key>AF79408B-314A-4D99-AB6C-75A7DC311738</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/CallaJun/MamaEarth.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>1DA82390-0992-4EF5-81A7-E4BDB01F4651</string>
+	<string>AF79408B-314A-4D99-AB6C-75A7DC311738</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1DA82390-0992-4EF5-81A7-E4BDB01F4651</string>
+			<string>AF79408B-314A-4D99-AB6C-75A7DC311738</string>
 			<key>IDESourceControlWCCName</key>
 			<string>MamaEarth</string>
 		</dict>

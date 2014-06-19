@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0D7D91194FE213007CAA1B"
+               BlueprintIdentifier = "AB9802CE19528FF600D85C2A"
                BuildableName = "MamaEarth.app"
                BlueprintName = "MamaEarth"
                ReferencedContainer = "container:MamaEarth.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "AB0D7DB8194FE214007CAA1B"
+               BlueprintIdentifier = "AB9802EF19528FF700D85C2A"
                BuildableName = "MamaEarthTests.xctest"
                BlueprintName = "MamaEarthTests"
                ReferencedContainer = "container:MamaEarth.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB0D7D91194FE213007CAA1B"
+            BlueprintIdentifier = "AB9802CE19528FF600D85C2A"
             BuildableName = "MamaEarth.app"
             BlueprintName = "MamaEarth"
             ReferencedContainer = "container:MamaEarth.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB0D7D91194FE213007CAA1B"
+            BlueprintIdentifier = "AB9802CE19528FF600D85C2A"
             BuildableName = "MamaEarth.app"
             BlueprintName = "MamaEarth"
             ReferencedContainer = "container:MamaEarth.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "AB0D7D91194FE213007CAA1B"
+            BlueprintIdentifier = "AB9802CE19528FF600D85C2A"
             BuildableName = "MamaEarth.app"
             BlueprintName = "MamaEarth"
             ReferencedContainer = "container:MamaEarth.xcodeproj">
