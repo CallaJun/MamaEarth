@@ -13,6 +13,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentLocation;
 @property (weak, nonatomic) IBOutlet UILabel *currentTemp;
 @property (weak, nonatomic) IBOutlet UILabel *lastRetrieved;
+@property (weak, nonatomic) IBOutlet UILabel *advice;
 
 - (IBAction)refreshTemp:(UIButton *)sender;
 @end

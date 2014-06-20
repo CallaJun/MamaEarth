@@ -58,11 +58,22 @@
                                 <state key="normal" title="Refresh">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="refreshTemp:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="RbH-i9-zCb"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xgp-yX-dnA">
+                                <rect key="frame" x="110" y="212" width="93" height="81"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="advice" destination="Xgp-yX-dnA" id="63Z-Mc-DUz"/>
                         <outlet property="currentLocation" destination="SvS-6R-1zf" id="VkL-Io-h5c"/>
                         <outlet property="currentTemp" destination="WNY-p4-W6E" id="5m4-51-ylA"/>
                         <outlet property="lastRetrieved" destination="8Sh-bP-fSv" id="4BQ-oR-bvz"/>

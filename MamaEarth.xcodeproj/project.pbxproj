@@ -469,6 +469,7 @@
 				AB98030319528FF700D85C2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AB98030419528FF700D85C2A /* Build configuration list for PBXNativeTarget "MamaEarthTests" */ = {
 			isa = XCConfigurationList;
@@ -477,6 +478,7 @@
 				AB98030619528FF700D85C2A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
