@@ -37,7 +37,7 @@ static const NSString *WORLD_WEATHER_ONLINE_API_KEY = @"49c22460c0eaaa275b796d5d
     self.currentTemperature = [temperature stringByAppendingString:@"F"];
     
     //NSString *desc = [[tempDictionary valueForKey:@"weatherDesc"]stringValue];
-    self.currentDescription = @"hello";
+    self.currentDescription = @"hi";
 
 }
 - (void)getWeatherAtCurrentLocation:(CLLocationCoordinate2D)coordinate {
