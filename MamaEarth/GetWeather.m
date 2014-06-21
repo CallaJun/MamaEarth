@@ -27,20 +27,17 @@ static const NSString *WORLD_WEATHER_ONLINE_API_KEY = @"49c22460c0eaaa275b796d5d
     NSArray *currentLocationString = [currentLocation valueForKey:@"value"];
     self.currentLocation = currentLocationString.lastObject;
     
-    // Getting current temp in degrees C
+    // Getting current temp in degrees F
     NSArray *currentCondition = [weather objectForKey:@"current_condition"];
     NSDictionary *tempDictionary = [currentCondition objectAtIndex:0];
-    //NSArray *tempInC = [tempDictionary valueForKey:@"temp_C"]; //Taking away declarationg of tempInC
+    NSArray *tempInF = [tempDictionary valueForKey:@"temp_F"];
     
-    //Calculating tempInF
-    NSInteger value = [[tempDictionary valueForKey:@"temp_C"] intValue];
-    NSInteger Fvalue = value*1.8+32;
-    _degreesF = Fvalue;
-    NSString *tempInF = [NSString stringWithFormat:@"%ld", Fvalue];
-    
-    //originally NSArray *weatherInC = [currentCondition objectForKey:@"temp_c"];
+    //NSArray *weatherInC = [currentCondition objectForKey:@"temp_c"];
     NSString *temperature = [NSString stringWithFormat:@"%@", tempInF];
     self.currentTemperature = [temperature stringByAppendingString:@"F"];
+    
+    //NSString *desc = [[tempDictionary valueForKey:@"weatherDesc"]stringValue];
+    self.currentDescription = @"hello";
 
 }
 - (void)getWeatherAtCurrentLocation:(CLLocationCoordinate2D)coordinate {

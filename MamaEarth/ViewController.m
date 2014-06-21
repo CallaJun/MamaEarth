@@ -37,6 +37,17 @@ BOOL weatherCalled = 0;
         [weather getWeatherAtCurrentLocation:currentLocation];
         self.currentLocation.text = weather.currentLocation;
         self.currentTemp.text = weather.currentTemperature;
+        self.currentDesc.text = weather.currentDescription;
+        
+        if(weather.Fvalue == 0) {
+            _advice.text = @"It's zero...:(";
+        }
+        else if(weather.Fvalue < 50) {
+            _advice.text = @"Less than 50";
+        }
+        else {
+            _advice.text = @"Greater than 50";
+        }
         
         NSDate *today = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -56,6 +67,7 @@ BOOL weatherCalled = 0;
 }
 - (IBAction)refreshTemp:(UIButton *)sender {
     weatherCalled = 0;
+    
     [self.locationManager startUpdatingLocation];
 }
 @end

@@ -12,7 +12,8 @@
 @interface GetWeather : NSObject
 @property (strong, nonatomic) NSString *currentLocation;
 @property (strong, nonatomic) NSString *currentTemperature;
-@property (nonatomic, assign) NSInteger degreesF;
+@property (strong,nonatomic) NSString *currentDescription;
+@property (nonatomic, assign) NSInteger Fvalue;
 
 - (void)getWeatherAtCurrentLocation:(CLLocationCoordinate2D)coordinate;
 @end
