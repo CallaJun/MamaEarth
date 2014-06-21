@@ -39,14 +39,14 @@ BOOL weatherCalled = 0;
         self.currentTemp.text = weather.currentTemperature;
         self.currentDesc.text = weather.currentDescription;
         
-        if(weather.Fvalue == 0) {
-            _advice.text = @"It's zero...:(";
+        if(weather.Fvalue > 80) {
+            _advice.text = @"Hot hot hot!";
         }
-        else if(weather.Fvalue < 50) {
-            _advice.text = @"Less than 50";
+        else if(60 < weather.Fvalue < 80) {
+            _advice.text = @"Mediumish.";
         }
         else {
-            _advice.text = @"Greater than 50";
+            _advice.text = @"COLD.";
         }
         
         NSDate *today = [NSDate date];
