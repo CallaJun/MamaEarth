@@ -50,12 +50,28 @@ BOOL weatherCalled = 0;
         else {
             _advice.text = @"COLD.";
         }
-        NSDate *today = [NSDate date];
+        /*//Date
+        NSDate *now = [NSDate date];
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        dateFormatter.dateStyle = NSDateFormatterNoStyle;
+        NSString *date = [dateFormatter stringFromDate: now];
+        //Time
+        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
+        //[timeFormatter setDateFormat:@"hh-mm"];
+        timeFormatter.timeStyle = NSDateFormatterShortStyle;
+        NSString *time = [timeFormatter stringFromDate: now];*/
+        
+        NSDate *now = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.dateStyle = NSDateFormatterNoStyle;
-        formatter.timeStyle = NSDateFormatterShortStyle;
-        self.lastRetrieved.text = [formatter stringFromDate:today];
+        [formatter setDateStyle:NSDateFormatterShortStyle];
+        [formatter setTimeStyle:NSDateFormatterShortStyle];
+        NSString *dateTime = [formatter stringFromDate:now];
+        
+        NSString * lastUpdated = [NSString stringWithFormat:@"Last updated: %@", dateTime];
+        self.lastRetrieved.text = lastUpdated;
+        
         weatherCalled = 0;
+        
     } else {
         NSLog(@"Weather Check Already in Progress");
     }
