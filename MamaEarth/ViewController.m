@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "GetWeather.h"
+#import <iAd/iAd.h>
 
 @interface ViewController ()
 @property (strong, nonatomic) CLLocationManager *locationManager;
@@ -23,7 +24,6 @@ BOOL weatherCalled = 0;
     [self.locationManager startUpdatingLocation];
 	// Do any additional setup after loading the view, typically from a nib.
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -42,13 +42,14 @@ BOOL weatherCalled = 0;
         if(weather.Fvalue > 80) {
             _advice.text = @"Hot hot hot!";
         }
-        else if(60 < weather.Fvalue < 80) {
-            _advice.text = @"Mediumish.";
+        else if(60 < weather.Fvalue < 80 && [weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) {
+            _advice.text = @"It's in between 60 and 80, and cloudy.";
+            UIImage *kitty = [UIImage imageNamed:@"kitty.png"];
+            [_mamaSays setImage:kitty];
         }
         else {
             _advice.text = @"COLD.";
         }
-        
         NSDate *today = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateStyle = NSDateFormatterNoStyle;
@@ -69,5 +70,18 @@ BOOL weatherCalled = 0;
     weatherCalled = 0;
     
     [self.locationManager startUpdatingLocation];
+}
+#pragma mark iAd Delegate Methods
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0 ];
+    [UIView commitAnimations];
 }
 @end

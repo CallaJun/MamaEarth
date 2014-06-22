@@ -8,13 +8,15 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
-
-@interface ViewController : UIViewController <CLLocationManagerDelegate>
+#import <iAd/iAd.h>
+@interface ViewController : UIViewController <CLLocationManagerDelegate, ADBannerViewDelegate> {
+}
 @property (weak, nonatomic) IBOutlet UILabel *currentLocation;
 @property (weak, nonatomic) IBOutlet UILabel *currentTemp;
 @property (weak, nonatomic) IBOutlet UILabel *lastRetrieved;
 @property (weak, nonatomic) IBOutlet UILabel *advice;
 @property (weak, nonatomic) IBOutlet UILabel *currentDesc;
+@property (weak, nonatomic) IBOutlet UIImageView *mamaSays;
 
 - (IBAction)refreshTemp:(UIButton *)sender;
 @end

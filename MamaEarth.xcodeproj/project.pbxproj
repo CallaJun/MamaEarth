@@ -22,6 +22,8 @@
 		AB9802FC19528FF700D85C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB9802FA19528FF700D85C2A /* InfoPlist.strings */; };
 		AB9802FE19528FF700D85C2A /* MamaEarthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9802FD19528FF700D85C2A /* MamaEarthTests.m */; };
 		AB9803091952920400D85C2A /* GetWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9803081952920400D85C2A /* GetWeather.m */; };
+		ABD3333E1956296B005F4ABD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD3333D1956296B005F4ABD /* iAd.framework */; };
+		ABD3334119562FFF005F4ABD /* kitty.png in Resources */ = {isa = PBXBuildFile; fileRef = ABD3334019562FFF005F4ABD /* kitty.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		AB9802FD19528FF700D85C2A /* MamaEarthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MamaEarthTests.m; sourceTree = "<group>"; };
 		AB9803071952920400D85C2A /* GetWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetWeather.h; sourceTree = "<group>"; };
 		AB9803081952920400D85C2A /* GetWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetWeather.m; sourceTree = "<group>"; };
+		ABD3333D1956296B005F4ABD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		ABD3334019562FFF005F4ABD /* kitty.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = kitty.png; path = MamaEarth/weathercases/kitty.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD3333E1956296B005F4ABD /* iAd.framework in Frameworks */,
 				AB9802D519528FF600D85C2A /* CoreGraphics.framework in Frameworks */,
 				AB9802D719528FF600D85C2A /* UIKit.framework in Frameworks */,
 				AB9802D319528FF600D85C2A /* Foundation.framework in Frameworks */,
@@ -104,6 +109,7 @@
 		AB9802D119528FF600D85C2A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ABD3333D1956296B005F4ABD /* iAd.framework */,
 				AB9802D219528FF600D85C2A /* Foundation.framework */,
 				AB9802D419528FF600D85C2A /* CoreGraphics.framework */,
 				AB9802D619528FF600D85C2A /* UIKit.framework */,
@@ -122,6 +128,7 @@
 				AB9802E819528FF600D85C2A /* ViewController.m */,
 				AB9803071952920400D85C2A /* GetWeather.h */,
 				AB9803081952920400D85C2A /* GetWeather.m */,
+				ABD3333F19562FFF005F4ABD /* weathercases */,
 				AB9802EA19528FF600D85C2A /* Images.xcassets */,
 				AB9802D919528FF600D85C2A /* Supporting Files */,
 			);
@@ -155,6 +162,14 @@
 				AB9802FA19528FF700D85C2A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABD3333F19562FFF005F4ABD /* weathercases */ = {
+			isa = PBXGroup;
+			children = (
+				ABD3334019562FFF005F4ABD /* kitty.png */,
+			);
+			path = weathercases;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB9802EB19528FF600D85C2A /* Images.xcassets in Resources */,
+				ABD3334119562FFF005F4ABD /* kitty.png in Resources */,
 				AB9802DD19528FF600D85C2A /* InfoPlist.strings in Resources */,
 				AB9802E619528FF600D85C2A /* Main.storyboard in Resources */,
 			);
