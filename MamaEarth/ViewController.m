@@ -39,28 +39,20 @@ BOOL weatherCalled = 0;
         self.currentTemp.text = weather.currentTemperature;
         self.currentDesc.text = weather.currentDescription;
         
-        if(weather.Fvalue > 80) {
+        if(weather.Fvalue > 85) {
             _advice.text = @"Hot hot hot!";
         }
-        else if(60 < weather.Fvalue < 80 && [weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) {
+        else if(60 < weather.Fvalue < 85 && [weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) {
             _advice.text = @"It's in between 60 and 80, and cloudy.";
-            UIImage *kitty = [UIImage imageNamed:@"kitty.png"];
-            [_mamaSays setImage:kitty];
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
         }
         else {
             _advice.text = @"COLD.";
+            UIImage *graph = [UIImage imageNamed:@"graph.png"];
+            [_mamaSays setImage:graph];
         }
-        /*//Date
-        NSDate *now = [NSDate date];
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        dateFormatter.dateStyle = NSDateFormatterNoStyle;
-        NSString *date = [dateFormatter stringFromDate: now];
-        //Time
-        NSDateFormatter *timeFormatter = [[NSDateFormatter alloc] init];
-        //[timeFormatter setDateFormat:@"hh-mm"];
-        timeFormatter.timeStyle = NSDateFormatterShortStyle;
-        NSString *time = [timeFormatter stringFromDate: now];*/
-        
+
         NSDate *now = [NSDate date];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterShortStyle];
