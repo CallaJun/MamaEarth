@@ -39,16 +39,214 @@ BOOL weatherCalled = 0;
         self.currentTemp.text = weather.currentTemperature;
         self.currentDesc.text = weather.currentDescription;
         
-        if(weather.Fvalue > 85) {
-            _advice.text = @"Hot hot hot!";
+        //WEATHER CASES
+        if([weather.currentDescription rangeOfString:@"Sunny"].location != NSNotFound) {
+            _advice.text = @"Shorts, t-shirt, short sleeves, flip flops, and sun screen - lots of it!";
         }
-        else if(60 < weather.Fvalue < 85 && [weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) {
-            _advice.text = @"It's in between 60 and 80, and cloudy.";
+        //Cloudy or overcast
+        else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast"].location != NSNotFound))) {
+            _advice.text = @"You should be fine in a t-shirt, or whatever is comfortable and appropriate.";
             UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
             [_mamaSays setImage:RutheHopper];
         }
+        else if(60 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast"].location != NSNotFound))) {
+            _advice.text = @"The weather should be fair, though a sweater might be useful.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Mist and fog
+        else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Mist"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Fog"].location != NSNotFound))) {
+            _advice.text = @"Whatever is comfortable and appropriate should be fine - but remember to turn on your fog lights!";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(60 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Mist"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Fog"].location != NSNotFound))) {
+            _advice.text = @"A light sweater might be nice - remember to turn on your fog lights!";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Patchy rain nearby
+        else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy rain nearby"].location != NSNotFound) {
+            _advice.text = @"Standard clothing should be fine, but a shell rainjacket or sweater might be nice. Also, you might want an umbrella.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy rain nearby"].location != NSNotFound) {
+            _advice.text = @"Whatever your wearing should be okay, but make sure to bring a sweatshirt, light rain jacket, or hoodie of some kind. And a small umbrella might be nice.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Patchy snow nearby
+        else if(15 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy snow nearby"].location != NSNotFound) {
+            _advice.text = @"Snow coat, snow boots, gloves, earmuffs - the whole deal.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(15 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy snow nearby"].location != NSNotFound) {
+            _advice.text = @"Snow coat, snow boots, gloves, earmuffs - the whole deal. Seriously. It's cold. Also, long underwear. Just do it.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Patchy sleet nearby
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy sleet nearby"].location != NSNotFound) {
+            _advice.text = @"Warm coat, gloves, earmuffs, and some good, waterproof boots.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy sleet nearby"].location != NSNotFound) {
+            _advice.text = @"Snow coat, gloves, earmuffs, and some good, waterproof boots.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Freezing drizzle and heavy freezing drizzle
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Freezing drizzle"].location != NSNotFound) {
+            _advice.text = @"Jeans. Long-sleeved shirt. Scarf. Warm and waterproof winter coat. Maybe a hat that will fit underneath the hood. Waterproof boots.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Freezing drizzle"].location != NSNotFound) {
+            _advice.text = @"Really warm pants. Long-sleeved shirt. Long underwear. Scarf. Warm and waterproof winter coat. Waterproof boots. Maybe a hat that will fit underneath the hood. A double hood might be nice.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Thundery outbreaks nearby
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
+            _advice.text = @"A light-ish coat or sweater, possibly a shell. Bring an umbrella just in case.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(40 > weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
+            _advice.text = @"Bring a coat or a thick hoodie, and don't forget an umbrella just in case.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Blowing snow
+        else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
+            _advice.text = @"Winter coat's a given. So are gloves, boots with good traction, the whole deal. A hat. And ear flaps. Do not forget ear flaps. That, or ear muffs. Oh, and tissues.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
+            _advice.text = @"Sweetheart, you'd better have a really warm winter coat (down)- maybe two - with the whole deal. Hat (With ear flaps. Seriously). Or earmuffs. Or both. And gloves, boots with good traction, all of that. Oh, and tissues.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Blizzard
+        else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Blizzard"].location != NSNotFound) {
+            _advice.text = @"Winter coat's a given. So are gloves, the whole deal. A hat. And ear flaps. Do not forget ear flaps. That, or ear muffs. And don't forget some boots with good traction. And tissues.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Blizzard"].location != NSNotFound) {
+            _advice.text = @"Sweetheart, you'd better have a really warm winter coat (down)- maybe two - with the whole deal. Hat (With ear flaps. Seriously). Or earmuffs. Or both. And gloves, boots with good traction, all of that. Oh, and tissues.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Light drizzle and patchy light drizzle
+        else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
+            _advice.text = @"Regular clothes should do - perhaps a light sweather. And maybe a small umbrella.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
+            _advice.text = @"Regular clothes with a hoodie or a sweatshirt should be fine. And bring an umbrella - a small one should do.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Light rain and patchy light rain
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) {
+            _advice.text = @"Pants and a hoodie should be fine, but bring an umbrella.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //freezing rain
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light freezing rain"].location != NSNotFound))) {
+            _advice.text = @"Pants and a warm hoodie or sweatshirt should do the trick, but bring an umbrella.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Moderate rain and moderate rain at times
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) {
+            _advice.text = @"Long sleeves and pants. Sweatshirt or hoodie - maybe even a light rainjacket. A good umbrealla. Waterproof shoes or rainboots.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //freezing rain
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"moderate freezing rain"].location != NSNotFound))) {
+            _advice.text = @"Long sleeves and pants. Warm sweatshirt or hoodie - maybe even a rainjacket. A good umbrealla. Waterproof shoes or rainboots.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //heavy rain and heavy rain at times or Torrential
+        else if(40 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound))) {
+            _advice.text = @"Raincoat. Rainboots. A strong umbrella.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //freezing rain
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy freezing rain"].location != NSNotFound))) {
+            _advice.text = @"Raincoat, rainboots, and a strong umbrella. And extra layers might help.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //light snow or light sleet or patchy light snow
+        else if(20 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
+            _advice.text = @"Waterproof boots are a must. And a good coat. Earmuffs or a beanie are advisable. And gloves.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
+            _advice.text = @"Gloves. Waterproof boots, a good down coat. Layers, lots of them. Earmuffs or a beanie underneath your hood.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //moderate or heavy sleet
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
+            _advice.text = @"A good, water-resistant coat. Some waterproof boots. Gloves. Earmuffs or a beanie are advisable.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
+            _advice.text = @"Waterproof boots, a really warm and water-resistant coat, and layers. Lots of them. Gloves. Oh, and earmuffs or a beanie.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Moderate snow or patchy moderate snow
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
+            _advice.text = @"A warm winter coat, water-proof boots, gloves, long sleeves and pants, a beanie or earmuffs - the whole deal.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
+            _advice.text = @"A really warm winter coat, water-proof boots, gloves, long sleeves and pants, a beanie or earmuffs - the whole deal.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //heavy snow or patchy heavy snow
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"heavy snow"].location != NSNotFound) {
+            _advice.text = @"An inpenatrable coat with inpenatrable boots and long sleeves and earmuffs or a beanie, a scarf, gloves...go all out.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"heavy snow"].location != NSNotFound) {
+            _advice.text = @"An inpenatrable coat with inpenatrable boots and long sleeves and earmuffs or a beanie, a scarf, gloves, tights under your pants...go all out, Sweetie. It's cold outside.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //light, moderate, heavy showers of ice pellets, ice pellets
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"ice pellets"].location != NSNotFound) {
+            _advice.text = @"Snow clothes - coat, boots, pants, gloves, etc. But bring an umbrella. A good one. Or just stay inside.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"ice pellets"].location != NSNotFound) {
+            _advice.text = @"Snow clothes - coat, boots, pants, gloves, etc. But bring an umbrella. A good one. Or just stay inside.";
+            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
+            [_mamaSays setImage:RutheHopper];
+        }
+        //Else
         else {
-            _advice.text = @"COLD.";
+            _advice.text = @"Mama doesn't know.";
             UIImage *graph = [UIImage imageNamed:@"graph.png"];
             [_mamaSays setImage:graph];
         }
