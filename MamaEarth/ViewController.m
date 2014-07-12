@@ -41,7 +41,8 @@ BOOL weatherCalled = 0;
         
         //WEATHER CASES
         if([weather.currentDescription rangeOfString:@"Sunny"].location != NSNotFound) {
-            _advice.text = @"Shorts, t-shirt, short sleeves, flip flops, and sun screen - lots of it!";
+            UIImage *Sunny1 = [UIImage imageNamed:@"Sunny1.png"];
+            [_mamaSays setImage:Sunny1];
         }
         //Cloudy or overcast
         else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast"].location != NSNotFound))) {
@@ -54,14 +55,12 @@ BOOL weatherCalled = 0;
         }
         //Mist and fog
         else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Mist"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Fog"].location != NSNotFound))) {
-            _advice.text = @"Whatever is comfortable and appropriate should be fine - but remember to turn on your fog lights!";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *MistFog1 = [UIImage imageNamed:@"MistFog1.png"];
+            [_mamaSays setImage:MistFog1];
         }
         else if(60 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Mist"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Fog"].location != NSNotFound))) {
-            _advice.text = @"A light sweater might be nice - remember to turn on your fog lights!";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *MistFog2 = [UIImage imageNamed:@"MistFog2.png"];
+            [_mamaSays setImage:MistFog2];
         }
         //Patchy rain nearby
         else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy rain nearby"].location != NSNotFound) {
@@ -274,18 +273,5 @@ BOOL weatherCalled = 0;
     weatherCalled = 0;
     
     [self.locationManager startUpdatingLocation];
-}
-#pragma mark iAd Delegate Methods
--(void)bannerViewDidLoadAd:(ADBannerView *)banner {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
-    [banner setAlpha:1];
-    [UIView commitAnimations];
-}
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
-    [UIView beginAnimations:nil context:nil];
-    [UIView setAnimationDuration:1];
-    [banner setAlpha:0 ];
-    [UIView commitAnimations];
 }
 @end

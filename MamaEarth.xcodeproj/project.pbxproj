@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB1F90A1195700FC00EA8E98 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1F90A0195700FC00EA8E98 /* graph.png */; };
+		AB1A17501971C6E20084E523 /* Sunny1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB1A174F1971C6E20084E523 /* Sunny1.png */; };
+		AB76985A1971FBF8001C5044 /* MistFog1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7698591971FBF8001C5044 /* MistFog1.png */; };
+		AB76985C1971FC71001C5044 /* MistFog2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB76985B1971FC71001C5044 /* MistFog2.png */; };
 		AB9802D319528FF600D85C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D219528FF600D85C2A /* Foundation.framework */; };
 		AB9802D519528FF600D85C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D419528FF600D85C2A /* CoreGraphics.framework */; };
 		AB9802D719528FF600D85C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D619528FF600D85C2A /* UIKit.framework */; };
@@ -23,7 +25,6 @@
 		AB9802FC19528FF700D85C2A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB9802FA19528FF700D85C2A /* InfoPlist.strings */; };
 		AB9802FE19528FF700D85C2A /* MamaEarthTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9802FD19528FF700D85C2A /* MamaEarthTests.m */; };
 		AB9803091952920400D85C2A /* GetWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9803081952920400D85C2A /* GetWeather.m */; };
-		AB9B72BA1957714200A493E1 /* RutheHopper.png in Resources */ = {isa = PBXBuildFile; fileRef = AB9B72B91957714200A493E1 /* RutheHopper.png */; };
 		ABA28CF91970BEEF002CF886 /* CloudyOvercast1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABA28CF81970BEEF002CF886 /* CloudyOvercast1.png */; };
 		ABD3333E1956296B005F4ABD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD3333D1956296B005F4ABD /* iAd.framework */; };
 		ABDDAECC1971AEE000BF7BF5 /* CloudyOvercast2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDDAECB1971AEE000BF7BF5 /* CloudyOvercast2.png */; };
@@ -40,7 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB1F90A0195700FC00EA8E98 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = graph.png; sourceTree = "<group>"; };
+		AB1A174F1971C6E20084E523 /* Sunny1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sunny1.png; sourceTree = "<group>"; };
+		AB7698591971FBF8001C5044 /* MistFog1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MistFog1.png; sourceTree = "<group>"; };
+		AB76985B1971FC71001C5044 /* MistFog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MistFog2.png; sourceTree = "<group>"; };
 		AB9802CF19528FF600D85C2A /* MamaEarth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaEarth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9802D219528FF600D85C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB9802D419528FF600D85C2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -62,7 +65,6 @@
 		AB9802FD19528FF700D85C2A /* MamaEarthTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MamaEarthTests.m; sourceTree = "<group>"; };
 		AB9803071952920400D85C2A /* GetWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetWeather.h; sourceTree = "<group>"; };
 		AB9803081952920400D85C2A /* GetWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetWeather.m; sourceTree = "<group>"; };
-		AB9B72B91957714200A493E1 /* RutheHopper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RutheHopper.png; sourceTree = "<group>"; };
 		ABA28CF81970BEEF002CF886 /* CloudyOvercast1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloudyOvercast1.png; sourceTree = "<group>"; };
 		ABD3333D1956296B005F4ABD /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		ABDDAECB1971AEE000BF7BF5 /* CloudyOvercast2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloudyOvercast2.png; sourceTree = "<group>"; };
@@ -173,10 +175,11 @@
 		ABD3333F19562FFF005F4ABD /* weathercases */ = {
 			isa = PBXGroup;
 			children = (
+				AB1A174F1971C6E20084E523 /* Sunny1.png */,
 				ABDDAECB1971AEE000BF7BF5 /* CloudyOvercast2.png */,
 				ABA28CF81970BEEF002CF886 /* CloudyOvercast1.png */,
-				AB9B72B91957714200A493E1 /* RutheHopper.png */,
-				AB1F90A0195700FC00EA8E98 /* graph.png */,
+				AB7698591971FBF8001C5044 /* MistFog1.png */,
+				AB76985B1971FC71001C5044 /* MistFog2.png */,
 			);
 			path = weathercases;
 			sourceTree = "<group>";
@@ -265,12 +268,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB76985A1971FBF8001C5044 /* MistFog1.png in Resources */,
 				AB9802EB19528FF600D85C2A /* Images.xcassets in Resources */,
+				AB76985C1971FC71001C5044 /* MistFog2.png in Resources */,
 				AB9802DD19528FF600D85C2A /* InfoPlist.strings in Resources */,
-				AB9B72BA1957714200A493E1 /* RutheHopper.png in Resources */,
+				AB1A17501971C6E20084E523 /* Sunny1.png in Resources */,
 				AB9802E619528FF600D85C2A /* Main.storyboard in Resources */,
 				ABA28CF91970BEEF002CF886 /* CloudyOvercast1.png in Resources */,
-				AB1F90A1195700FC00EA8E98 /* graph.png in Resources */,
 				ABDDAECC1971AEE000BF7BF5 /* CloudyOvercast2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
