@@ -45,14 +45,12 @@ BOOL weatherCalled = 0;
         }
         //Cloudy or overcast
         else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast"].location != NSNotFound))) {
-            _advice.text = @"You should be fine in a t-shirt, or whatever is comfortable and appropriate.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *CloudyOvercast1 = [UIImage imageNamed:@"CloudyOvercast1.png"];
+            [_mamaSays setImage:CloudyOvercast1];
         }
         else if(60 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Cloudy"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast"].location != NSNotFound))) {
-            _advice.text = @"The weather should be fair, though a sweater might be useful.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *CloudyOvercast2 = [UIImage imageNamed:@"CloudyOvercast2.png"];
+            [_mamaSays setImage:CloudyOvercast2];
         }
         //Mist and fog
         else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Mist"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Fog"].location != NSNotFound))) {

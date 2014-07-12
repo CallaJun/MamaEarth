@@ -16,7 +16,7 @@ static const NSString *WORLD_WEATHER_ONLINE_API_KEY = @"49c22460c0eaaa275b796d5d
 - (void)parseJSONData:(NSData *)data {
     NSError *error;
     NSDictionary *parsedJSONData = [NSJSONSerialization JSONObjectWithData:data
-                                                                   options:kNilOptions
+                                                                options:kNilOptions
                                                                      error:&error];
     NSDictionary *weather = [parsedJSONData objectForKey:@"data"];
     
