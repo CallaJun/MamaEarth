@@ -65,13 +65,13 @@ BOOL weatherCalled = 0;
         //Patchy rain nearby
         else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy rain nearby"].location != NSNotFound) {
             _advice.text = @"Standard clothing should be fine, but a shell rainjacket or sweater might be nice. Also, you might want an umbrella.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *PatchyRainNearby1 = [UIImage imageNamed:@"PatchyRainNearby1.png"];
+            [_mamaSays setImage:PatchyRainNearby1];
         }
         else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy rain nearby"].location != NSNotFound) {
             _advice.text = @"Whatever your wearing should be okay, but make sure to bring a sweatshirt, light rain jacket, or hoodie of some kind. And a small umbrella might be nice.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *PatchyRainNearby2 = [UIImage imageNamed:@"PatchyRainNearby2.png"];
+            [_mamaSays setImage:PatchyRainNearby2];
         }
         //Patchy snow nearby
         else if(15 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy snow nearby"].location != NSNotFound) {
