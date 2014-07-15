@@ -12,6 +12,8 @@
 		AB7161C6197366AD003C5997 /* PatchyRainNearby2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7161C5197366AD003C5997 /* PatchyRainNearby2.png */; };
 		AB76985A1971FBF8001C5044 /* MistFog1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB7698591971FBF8001C5044 /* MistFog1.png */; };
 		AB76985C1971FC71001C5044 /* MistFog2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB76985B1971FC71001C5044 /* MistFog2.png */; };
+		AB788DDA1974FDE300D23879 /* PatchySleetNearby1.png in Resources */ = {isa = PBXBuildFile; fileRef = AB788DD91974FDE300D23879 /* PatchySleetNearby1.png */; };
+		AB788DDC1974FE9D00D23879 /* PatchySleetNearby2.png in Resources */ = {isa = PBXBuildFile; fileRef = AB788DDB1974FE9D00D23879 /* PatchySleetNearby2.png */; };
 		AB9802D319528FF600D85C2A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D219528FF600D85C2A /* Foundation.framework */; };
 		AB9802D519528FF600D85C2A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D419528FF600D85C2A /* CoreGraphics.framework */; };
 		AB9802D719528FF600D85C2A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9802D619528FF600D85C2A /* UIKit.framework */; };
@@ -50,6 +52,8 @@
 		AB7161C5197366AD003C5997 /* PatchyRainNearby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PatchyRainNearby2.png; sourceTree = "<group>"; };
 		AB7698591971FBF8001C5044 /* MistFog1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MistFog1.png; sourceTree = "<group>"; };
 		AB76985B1971FC71001C5044 /* MistFog2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MistFog2.png; sourceTree = "<group>"; };
+		AB788DD91974FDE300D23879 /* PatchySleetNearby1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PatchySleetNearby1.png; sourceTree = "<group>"; };
+		AB788DDB1974FE9D00D23879 /* PatchySleetNearby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PatchySleetNearby2.png; sourceTree = "<group>"; };
 		AB9802CF19528FF600D85C2A /* MamaEarth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MamaEarth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB9802D219528FF600D85C2A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB9802D419528FF600D85C2A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +196,8 @@
 				AB7161C5197366AD003C5997 /* PatchyRainNearby2.png */,
 				ABCE098B19736F3F00A23C5B /* PatchySnowNearby1.png */,
 				ABCE098D19736FEC00A23C5B /* PatchySnowNearby2.png */,
+				AB788DD91974FDE300D23879 /* PatchySleetNearby1.png */,
+				AB788DDB1974FE9D00D23879 /* PatchySleetNearby2.png */,
 			);
 			path = weathercases;
 			sourceTree = "<group>";
@@ -281,8 +287,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB76985A1971FBF8001C5044 /* MistFog1.png in Resources */,
+				AB788DDA1974FDE300D23879 /* PatchySleetNearby1.png in Resources */,
 				AB9802EB19528FF600D85C2A /* Images.xcassets in Resources */,
 				AB76985C1971FC71001C5044 /* MistFog2.png in Resources */,
+				AB788DDC1974FE9D00D23879 /* PatchySleetNearby2.png in Resources */,
 				ABCE098E19736FEC00A23C5B /* PatchySnowNearby2.png in Resources */,
 				AB9802DD19528FF600D85C2A /* InfoPlist.strings in Resources */,
 				ABCE098C19736F3F00A23C5B /* PatchySnowNearby1.png in Resources */,

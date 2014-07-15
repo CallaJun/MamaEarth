@@ -82,14 +82,12 @@ BOOL weatherCalled = 0;
         }
         //Patchy sleet nearby
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy sleet nearby"].location != NSNotFound) {
-            _advice.text = @"Warm coat, gloves, earmuffs, and some good, waterproof boots.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *PatchySleetNearby1 = [UIImage imageNamed:@"PatchySleetNearby1.png"];
+            [_mamaSays setImage:PatchySleetNearby1];
         }
         else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Patchy sleet nearby"].location != NSNotFound) {
-            _advice.text = @"Snow coat, gloves, earmuffs, and some good, waterproof boots.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *PatchySleetNearby2 = [UIImage imageNamed:@"PatchySleetNearby2.png"];
+            [_mamaSays setImage:PatchySleetNearby2];
         }
         //Freezing drizzle and heavy freezing drizzle
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Freezing drizzle"].location != NSNotFound) {
