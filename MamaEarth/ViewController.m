@@ -157,37 +157,34 @@ BOOL weatherCalled = 0;
         }
         //heavy rain and heavy rain at times or Torrential
         else if(40 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound))) {
-            _advice.text = @"Raincoat. Rainboots. A strong umbrella.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *HeavyRain1 = [UIImage imageNamed:@"HeavyRain1.png"];
+            [_mamaSays setImage:HeavyRain1];
         }
         //freezing rain
         else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy freezing rain"].location != NSNotFound))) {
             _advice.text = @"Raincoat, rainboots, and a strong umbrella. And extra layers might help.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *HeavyRain2 = [UIImage imageNamed:@"HeavyRain2.png"];
+            [_mamaSays setImage:HeavyRain2];
         }
         //light snow or light sleet or patchy light snow
         else if(20 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
             _advice.text = @"Waterproof boots are a must. And a good coat. Earmuffs or a beanie are advisable. And gloves.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightSnow1 = [UIImage imageNamed:@"LightSnow1.png"];
+            [_mamaSays setImage:LightSnow1];
         }
         else if(20 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
             _advice.text = @"Gloves. Waterproof boots, a good down coat. Layers, lots of them. Earmuffs or a beanie underneath your hood.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightSnow2 = [UIImage imageNamed:@"LightSnow2.png"];
+            [_mamaSays setImage:LightSnow2];
         }
         //moderate or heavy sleet
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
-            _advice.text = @"A good, water-resistant coat. Some waterproof boots. Gloves. Earmuffs or a beanie are advisable.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateHeavySleet1 = [UIImage imageNamed:@"ModerateHeavySleet1.png"];
+            [_mamaSays setImage:ModerateHeavySleet1];
         }
         else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
-            _advice.text = @"Waterproof boots, a really warm and water-resistant coat, and layers. Lots of them. Gloves. Oh, and earmuffs or a beanie.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateHeavySleet2 = [UIImage imageNamed:@"ModerateHeavySleet2.png"];
+            [_mamaSays setImage:ModerateHeavySleet2];
         }
         //Moderate snow or patchy moderate snow
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
