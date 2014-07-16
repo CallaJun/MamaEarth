@@ -23,6 +23,8 @@ BOOL weatherCalled = 0;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    self.canDisplayBannerAds = YES;
 }
 - (void)didReceiveMemoryWarning
 {
@@ -131,33 +133,27 @@ BOOL weatherCalled = 0;
             [_mamaSays setImage:LightDrizzle1];
         }
         else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
-            _advice.text = @"Regular clothes with a hoodie or a sweatshirt should be fine. And bring an umbrella - a small one should do.";
             UIImage *LightDrizzle2 = [UIImage imageNamed:@"LightDrizzle2.png"];
             [_mamaSays setImage:LightDrizzle2];
         }
         //Light rain and patchy light rain
         else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) {
-            _advice.text = @"Pants and a hoodie should be fine, but bring an umbrella.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightRain1 = [UIImage imageNamed:@"LightRain1.png"];
+            [_mamaSays setImage:LightRain1];
         }
         //freezing rain
         else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light freezing rain"].location != NSNotFound))) {
-            _advice.text = @"Pants and a warm hoodie or sweatshirt should do the trick, but bring an umbrella.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightRain2 = [UIImage imageNamed:@"LightRain2.png"];
+            [_mamaSays setImage:LightRain2];
         }
         //Moderate rain and moderate rain at times
         else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) {
-            _advice.text = @"Long sleeves and pants. Sweatshirt or hoodie - maybe even a light rainjacket. A good umbrealla. Waterproof shoes or rainboots.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateRain1 = [UIImage imageNamed:@"ModerateRain1.png"];
+            [_mamaSays setImage:ModerateRain1];
         }
-        //freezing rain
         else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"moderate freezing rain"].location != NSNotFound))) {
-            _advice.text = @"Long sleeves and pants. Warm sweatshirt or hoodie - maybe even a rainjacket. A good umbrealla. Waterproof shoes or rainboots.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateRain2 = [UIImage imageNamed:@"ModerateRain2.png"];
+            [_mamaSays setImage:ModerateRain2];
         }
         //heavy rain and heavy rain at times or Torrential
         else if(40 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound))) {
@@ -258,5 +254,18 @@ BOOL weatherCalled = 0;
     weatherCalled = 0;
     
     [self.locationManager startUpdatingLocation];
+}
+#pragma mark iAd Delegate Methods
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error {
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0 ];
+    [UIView commitAnimations];
 }
 @end
