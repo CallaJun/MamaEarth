@@ -109,14 +109,12 @@ BOOL weatherCalled = 0;
         }
         //Blowing snow
         else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
-            _advice.text = @"Winter coat's a given. So are gloves, boots with good traction, the whole deal. A hat. And ear flaps. Do not forget ear flaps. That, or ear muffs. Oh, and tissues.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *BlowingSnow1 = [UIImage imageNamed:@"BlowingSnow1.png"];
+            [_mamaSays setImage:BlowingSnow1];
         }
         else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
-            _advice.text = @"Sweetheart, you'd better have a really warm winter coat (down)- maybe two - with the whole deal. Hat (With ear flaps. Seriously). Or earmuffs. Or both. And gloves, boots with good traction, all of that. Oh, and tissues.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *BlowingSnow2 = [UIImage imageNamed:@"BlowingSnow2.png"];
+            [_mamaSays setImage:BlowingSnow2];
         }
         //Blizzard
         else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Blizzard"].location != NSNotFound) {
