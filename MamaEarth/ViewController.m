@@ -91,25 +91,21 @@ BOOL weatherCalled = 0;
         }
         //Freezing drizzle and heavy freezing drizzle
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Freezing drizzle"].location != NSNotFound) {
-            _advice.text = @"Jeans. Long-sleeved shirt. Scarf. Warm and waterproof winter coat. Maybe a hat that will fit underneath the hood. Waterproof boots.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *FreezingDrizzle1 = [UIImage imageNamed:@"FreezingDrizzle1.png"];
+            [_mamaSays setImage:FreezingDrizzle1];
         }
         else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Freezing drizzle"].location != NSNotFound) {
-            _advice.text = @"Really warm pants. Long-sleeved shirt. Long underwear. Scarf. Warm and waterproof winter coat. Waterproof boots. Maybe a hat that will fit underneath the hood. A double hood might be nice.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *FreezingDrizzle2 = [UIImage imageNamed:@"FreezingDrizzle2.png"];
+            [_mamaSays setImage:FreezingDrizzle2];
         }
         //Thundery outbreaks nearby
         else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
-            _advice.text = @"A light-ish coat or sweater, possibly a shell. Bring an umbrella just in case.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *Thundery1 = [UIImage imageNamed:@"Thundery1.png"];
+            [_mamaSays setImage:Thundery1];
         }
         else if(40 > weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
-            _advice.text = @"Bring a coat or a thick hoodie, and don't forget an umbrella just in case.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *Thundery2 = [UIImage imageNamed:@"Thundery2.png"];
+            [_mamaSays setImage:Thundery2];
         }
         //Blowing snow
         else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
