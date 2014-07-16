@@ -118,25 +118,22 @@ BOOL weatherCalled = 0;
         }
         //Blizzard
         else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Blizzard"].location != NSNotFound) {
-            _advice.text = @"Winter coat's a given. So are gloves, the whole deal. A hat. And ear flaps. Do not forget ear flaps. That, or ear muffs. And don't forget some boots with good traction. And tissues.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *Blizzard1 = [UIImage imageNamed:@"Blizzard1.png"];
+            [_mamaSays setImage:Blizzard1];
         }
         else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Blizzard"].location != NSNotFound) {
-            _advice.text = @"Sweetheart, you'd better have a really warm winter coat (down)- maybe two - with the whole deal. Hat (With ear flaps. Seriously). Or earmuffs. Or both. And gloves, boots with good traction, all of that. Oh, and tissues.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *Blizzard2 = [UIImage imageNamed:@"Blizzard2.png"];
+            [_mamaSays setImage:Blizzard2];
         }
         //Light drizzle and patchy light drizzle
         else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
-            _advice.text = @"Regular clothes should do - perhaps a light sweather. And maybe a small umbrella.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightDrizzle1 = [UIImage imageNamed:@"LightDrizzle1.png"];
+            [_mamaSays setImage:LightDrizzle1];
         }
         else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
             _advice.text = @"Regular clothes with a hoodie or a sweatshirt should be fine. And bring an umbrella - a small one should do.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *LightDrizzle2 = [UIImage imageNamed:@"LightDrizzle2.png"];
+            [_mamaSays setImage:LightDrizzle2];
         }
         //Light rain and patchy light rain
         else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) {
