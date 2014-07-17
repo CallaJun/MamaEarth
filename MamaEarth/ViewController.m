@@ -101,20 +101,20 @@ BOOL weatherCalled = 0;
             [_mamaSays setImage:FreezingDrizzle2];
         }
         //Thundery outbreaks nearby
-        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Thundery"].location != NSNotFound) {
             UIImage *Thundery1 = [UIImage imageNamed:@"Thundery1.png"];
             [_mamaSays setImage:Thundery1];
         }
-        else if(40 > weather.Fvalue && [weather.currentDescription rangeOfString:@"thundery"].location != NSNotFound) {
+        else if(40 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Thundery"].location != NSNotFound) {
             UIImage *Thundery2 = [UIImage imageNamed:@"Thundery2.png"];
             [_mamaSays setImage:Thundery2];
         }
         //Blowing snow
-        else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
+        else if(10 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Blowing snow"].location != NSNotFound) {
             UIImage *BlowingSnow1 = [UIImage imageNamed:@"BlowingSnow1.png"];
             [_mamaSays setImage:BlowingSnow1];
         }
-        else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"blowing snow"].location != NSNotFound) {
+        else if(10 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Blowing snow"].location != NSNotFound) {
             UIImage *BlowingSnow2 = [UIImage imageNamed:@"BlowingSnow2.png"];
             [_mamaSays setImage:BlowingSnow2];
         }
@@ -128,76 +128,76 @@ BOOL weatherCalled = 0;
             [_mamaSays setImage:Blizzard2];
         }
         //Light drizzle and patchy light drizzle
-        else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
+        else if(50 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Light drizzle"].location != NSNotFound) {
             UIImage *LightDrizzle1 = [UIImage imageNamed:@"LightDrizzle1.png"];
             [_mamaSays setImage:LightDrizzle1];
         }
-        else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"light drizzle"].location != NSNotFound) {
+        else if(50 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Light drizzle"].location != NSNotFound) {
             UIImage *LightDrizzle2 = [UIImage imageNamed:@"LightDrizzle2.png"];
             [_mamaSays setImage:LightDrizzle2];
         }
         //Light rain and patchy light rain
-        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) {
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Light rain"].location != NSNotFound) {
             UIImage *LightRain1 = [UIImage imageNamed:@"LightRain1.png"];
             [_mamaSays setImage:LightRain1];
         }
         //freezing rain
-        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light freezing rain"].location != NSNotFound))) {
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Light rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light freezing rain"].location != NSNotFound))) {
             UIImage *LightRain2 = [UIImage imageNamed:@"LightRain2.png"];
             [_mamaSays setImage:LightRain2];
         }
         //Moderate rain and moderate rain at times
-        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) {
+        else if(40 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Moderate rain"].location != NSNotFound) {
             UIImage *ModerateRain1 = [UIImage imageNamed:@"ModerateRain1.png"];
             [_mamaSays setImage:ModerateRain1];
         }
-        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"moderate rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"moderate freezing rain"].location != NSNotFound))) {
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Moderate rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"moderate freezing rain"].location != NSNotFound))) {
             UIImage *ModerateRain2 = [UIImage imageNamed:@"ModerateRain2.png"];
             [_mamaSays setImage:ModerateRain2];
         }
         //heavy rain and heavy rain at times or Torrential
-        else if(40 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound))) {
+        else if(40 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Torrential rain"].location != NSNotFound))) {
             UIImage *HeavyRain1 = [UIImage imageNamed:@"HeavyRain1.png"];
             [_mamaSays setImage:HeavyRain1];
         }
         //freezing rain
-        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"torrential rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"heavy freezing rain"].location != NSNotFound))) {
+        else if(40 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Torrential rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Heavy rain"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Heavy freezing rain"].location != NSNotFound))) {
             UIImage *HeavyRain2 = [UIImage imageNamed:@"HeavyRain2.png"];
             [_mamaSays setImage:HeavyRain2];
         }
         //light snow or light sleet or patchy light snow
-        else if(20 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
+        else if(20 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Light sleet"].location != NSNotFound))) {
             UIImage *LightSnow1 = [UIImage imageNamed:@"LightSnow1.png"];
             [_mamaSays setImage:LightSnow1];
         }
-        else if(20 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"light sleet"].location != NSNotFound))) {
+        else if(20 > weather.Fvalue && (([weather.currentDescription rangeOfString:@"Light snow"].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Light sleet"].location != NSNotFound))) {
             UIImage *LightSnow2 = [UIImage imageNamed:@"LightSnow2.png"];
             [_mamaSays setImage:LightSnow2];
         }
         //moderate or heavy sleet
-        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Moderate or heavy sleet"].location != NSNotFound) {
             UIImage *ModerateHeavySleet1 = [UIImage imageNamed:@"ModerateHeavySleet1.png"];
             [_mamaSays setImage:ModerateHeavySleet1];
         }
-        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate or heavy sleet"].location != NSNotFound) {
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Moderate or heavy sleet"].location != NSNotFound) {
             UIImage *ModerateHeavySleet2 = [UIImage imageNamed:@"ModerateHeavySleet2.png"];
             [_mamaSays setImage:ModerateHeavySleet2];
         }
         //Moderate snow or patchy moderate snow
-        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Moderate snow"].location != NSNotFound) {
             UIImage *ModerateSnow1 = [UIImage imageNamed:@"ModerateSnow1.png"];
             [_mamaSays setImage:ModerateSnow1];
         }
-        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Moderate snow"].location != NSNotFound) {
             UIImage *ModerateSnow2 = [UIImage imageNamed:@"ModerateSnow2.png"];
             [_mamaSays setImage:ModerateSnow2];
         }
         //heavy snow or patchy heavy snow
-        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"heavy snow"].location != NSNotFound) {
+        else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"Heavy snow"].location != NSNotFound) {
             UIImage *HeavySnow1 = [UIImage imageNamed:@"HeavySnow1.png"];
             [_mamaSays setImage:HeavySnow1];
         }
-        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"heavy snow"].location != NSNotFound) {
+        else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"Heavy snow"].location != NSNotFound) {
             UIImage *HeavySnow2 = [UIImage imageNamed:@"HeavySnow2.png"];
             [_mamaSays setImage:HeavySnow2];
         }
