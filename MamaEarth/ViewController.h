@@ -14,7 +14,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *currentLocation;
 @property (weak, nonatomic) IBOutlet UILabel *currentTemp;
 @property (weak, nonatomic) IBOutlet UILabel *lastRetrieved;
-@property (weak, nonatomic) IBOutlet UILabel *advice;
 @property (weak, nonatomic) IBOutlet UILabel *currentDesc;
 @property (weak, nonatomic) IBOutlet UIImageView *mamaSays;
 

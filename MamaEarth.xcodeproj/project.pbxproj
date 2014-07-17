@@ -44,6 +44,11 @@
 		ABAEC1D319781CA900DDC4EF /* ModerateSnow2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABAEC1D219781CA900DDC4EF /* ModerateSnow2.png */; };
 		ABB412041976EE5F0076E437 /* HeavyRain1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB412031976EE5F0076E437 /* HeavyRain1.png */; };
 		ABB412061976EEB10076E437 /* HeavyRain2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABB412051976EEB10076E437 /* HeavyRain2.png */; };
+		ABC91BCD197886CF00B2BBCA /* HeavySnow1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC91BCC197886CF00B2BBCA /* HeavySnow1.png */; };
+		ABC91BCF1978872300B2BBCA /* HeavySnow2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC91BCE1978872300B2BBCA /* HeavySnow2.png */; };
+		ABC91BD1197888B600B2BBCA /* IcePellets1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC91BD0197888B600B2BBCA /* IcePellets1.png */; };
+		ABC91BD3197888FF00B2BBCA /* IcePellets2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC91BD2197888FF00B2BBCA /* IcePellets2.png */; };
+		ABC91BD5197889BD00B2BBCA /* DoesntKnow.png in Resources */ = {isa = PBXBuildFile; fileRef = ABC91BD4197889BD00B2BBCA /* DoesntKnow.png */; };
 		ABCE098C19736F3F00A23C5B /* PatchySnowNearby1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE098B19736F3F00A23C5B /* PatchySnowNearby1.png */; };
 		ABCE098E19736FEC00A23C5B /* PatchySnowNearby2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE098D19736FEC00A23C5B /* PatchySnowNearby2.png */; };
 		ABCE2EBC1976CF9A00F00DDE /* LightDrizzle2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE2EBB1976CF9A00F00DDE /* LightDrizzle2.png */; };
@@ -112,6 +117,11 @@
 		ABAEC1D219781CA900DDC4EF /* ModerateSnow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ModerateSnow2.png; sourceTree = "<group>"; };
 		ABB412031976EE5F0076E437 /* HeavyRain1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeavyRain1.png; sourceTree = "<group>"; };
 		ABB412051976EEB10076E437 /* HeavyRain2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeavyRain2.png; sourceTree = "<group>"; };
+		ABC91BCC197886CF00B2BBCA /* HeavySnow1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeavySnow1.png; sourceTree = "<group>"; };
+		ABC91BCE1978872300B2BBCA /* HeavySnow2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HeavySnow2.png; sourceTree = "<group>"; };
+		ABC91BD0197888B600B2BBCA /* IcePellets1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IcePellets1.png; sourceTree = "<group>"; };
+		ABC91BD2197888FF00B2BBCA /* IcePellets2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IcePellets2.png; sourceTree = "<group>"; };
+		ABC91BD4197889BD00B2BBCA /* DoesntKnow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DoesntKnow.png; sourceTree = "<group>"; };
 		ABCE098B19736F3F00A23C5B /* PatchySnowNearby1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PatchySnowNearby1.png; sourceTree = "<group>"; };
 		ABCE098D19736FEC00A23C5B /* PatchySnowNearby2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PatchySnowNearby2.png; sourceTree = "<group>"; };
 		ABCE2EBB1976CF9A00F00DDE /* LightDrizzle2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LightDrizzle2.png; sourceTree = "<group>"; };
@@ -264,6 +274,11 @@
 				AB0AC2141976F403003FFBC5 /* ModerateHeavySleet2.png */,
 				ABAEC1D019781C2D00DDC4EF /* ModerateSnow1.png */,
 				ABAEC1D219781CA900DDC4EF /* ModerateSnow2.png */,
+				ABC91BCC197886CF00B2BBCA /* HeavySnow1.png */,
+				ABC91BCE1978872300B2BBCA /* HeavySnow2.png */,
+				ABC91BD0197888B600B2BBCA /* IcePellets1.png */,
+				ABC91BD2197888FF00B2BBCA /* IcePellets2.png */,
+				ABC91BD4197889BD00B2BBCA /* DoesntKnow.png */,
 			);
 			path = weathercases;
 			sourceTree = "<group>";
@@ -358,17 +373,22 @@
 				AB76985A1971FBF8001C5044 /* MistFog1.png in Resources */,
 				AB788DDA1974FDE300D23879 /* PatchySleetNearby1.png in Resources */,
 				ABDF03741976E1BD00EF92DC /* ModerateRain1.png in Resources */,
+				ABC91BD3197888FF00B2BBCA /* IcePellets2.png in Resources */,
+				ABC91BCD197886CF00B2BBCA /* HeavySnow1.png in Resources */,
 				AB9802EB19528FF600D85C2A /* Images.xcassets in Resources */,
+				ABC91BD5197889BD00B2BBCA /* DoesntKnow.png in Resources */,
 				AB8B04FB19761E39001EA2CA /* Thundery2.png in Resources */,
 				AB8B04F919761DEF001EA2CA /* Thundery1.png in Resources */,
 				ABDF03721976E0D000EF92DC /* LightRain2.png in Resources */,
 				AB76985C1971FC71001C5044 /* MistFog2.png in Resources */,
 				AB788DDC1974FE9D00D23879 /* PatchySleetNearby2.png in Resources */,
+				ABC91BCF1978872300B2BBCA /* HeavySnow2.png in Resources */,
 				ABCE098E19736FEC00A23C5B /* PatchySnowNearby2.png in Resources */,
 				ABDF03701976E01400EF92DC /* LightRain1.png in Resources */,
 				AB9802DD19528FF600D85C2A /* InfoPlist.strings in Resources */,
 				AB0AC2151976F403003FFBC5 /* ModerateHeavySleet2.png in Resources */,
 				AB8B04F719761CC7001EA2CA /* FreezingDrizzle2.png in Resources */,
+				ABC91BD1197888B600B2BBCA /* IcePellets1.png in Resources */,
 				ABCE098C19736F3F00A23C5B /* PatchySnowNearby1.png in Resources */,
 				AB1A17501971C6E20084E523 /* Sunny1.png in Resources */,
 				AB0AC2111976F2B0003FFBC5 /* LightSnow2.png in Resources */,
