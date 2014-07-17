@@ -188,14 +188,12 @@ BOOL weatherCalled = 0;
         }
         //Moderate snow or patchy moderate snow
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
-            _advice.text = @"A warm winter coat, water-proof boots, gloves, long sleeves and pants, a beanie or earmuffs - the whole deal.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateSnow1 = [UIImage imageNamed:@"ModerateSnow1.png"];
+            [_mamaSays setImage:ModerateSnow1];
         }
         else if(20 > weather.Fvalue && [weather.currentDescription rangeOfString:@"moderate snow"].location != NSNotFound) {
-            _advice.text = @"A really warm winter coat, water-proof boots, gloves, long sleeves and pants, a beanie or earmuffs - the whole deal.";
-            UIImage *RutheHopper = [UIImage imageNamed:@"RutheHopper.png"];
-            [_mamaSays setImage:RutheHopper];
+            UIImage *ModerateSnow2 = [UIImage imageNamed:@"ModerateSnow2.png"];
+            [_mamaSays setImage:ModerateSnow2];
         }
         //heavy snow or patchy heavy snow
         else if(20 <= weather.Fvalue && [weather.currentDescription rangeOfString:@"heavy snow"].location != NSNotFound) {
