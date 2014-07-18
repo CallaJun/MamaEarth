@@ -23,6 +23,8 @@ BOOL weatherCalled = 0;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
 	// Do any additional setup after loading the view, typically from a nib.
+
+    [_refresh setTitle:@"Refresh" forState:UIControlStateNormal];
     
     self.canDisplayBannerAds = YES;
 }
