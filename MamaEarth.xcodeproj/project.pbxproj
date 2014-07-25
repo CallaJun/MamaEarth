@@ -52,7 +52,6 @@
 		ABCE098C19736F3F00A23C5B /* PatchySnowNearby1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE098B19736F3F00A23C5B /* PatchySnowNearby1.png */; };
 		ABCE098E19736FEC00A23C5B /* PatchySnowNearby2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE098D19736FEC00A23C5B /* PatchySnowNearby2.png */; };
 		ABCE2EBC1976CF9A00F00DDE /* LightDrizzle2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABCE2EBB1976CF9A00F00DDE /* LightDrizzle2.png */; };
-		ABD3333E1956296B005F4ABD /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABD3333D1956296B005F4ABD /* iAd.framework */; };
 		ABDDAECC1971AEE000BF7BF5 /* CloudyOvercast2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDDAECB1971AEE000BF7BF5 /* CloudyOvercast2.png */; };
 		ABDF03701976E01400EF92DC /* LightRain1.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDF036F1976E01400EF92DC /* LightRain1.png */; };
 		ABDF03721976E0D000EF92DC /* LightRain2.png in Resources */ = {isa = PBXBuildFile; fileRef = ABDF03711976E0D000EF92DC /* LightRain2.png */; };
@@ -141,7 +140,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABD3333E1956296B005F4ABD /* iAd.framework in Frameworks */,
 				AB9802D519528FF600D85C2A /* CoreGraphics.framework in Frameworks */,
 				AB9802D719528FF600D85C2A /* UIKit.framework in Frameworks */,
 				AB9802D319528FF600D85C2A /* Foundation.framework in Frameworks */,
