@@ -22,7 +22,8 @@ BOOL weatherCalled = 0;
     self.locationManager.delegate = self;
     [self.locationManager startUpdatingLocation];
 	// Do any additional setup after loading the view, typically from a nib.
-
+    UIImage *DoesntKnow = [UIImage imageNamed:@"DoesntKnow.png"];
+    [_mamaSays setImage:DoesntKnow];
     [_refresh setTitle:@"Refresh" forState:UIControlStateNormal];
 }
 - (void)didReceiveMemoryWarning
@@ -45,9 +46,13 @@ BOOL weatherCalled = 0;
             UIImage *Sunny1 = [UIImage imageNamed:@"Sunny1.png"];
             [_mamaSays setImage:Sunny1];
         }
-        else if(60 > weather.Fvalue && ([weather.currentDescription rangeOfString:@"Sunny" options:NSCaseInsensitiveSearch].location != NSNotFound)) {
+        else if(60 >= weather.Fvalue && ([weather.currentDescription rangeOfString:@"Sunny" options:NSCaseInsensitiveSearch].location != NSNotFound) >= 42) {
             UIImage *CloudyOvercast1 = [UIImage imageNamed:@"CloudyOvercast1.png"];
             [_mamaSays setImage:CloudyOvercast1];
+        }
+        else if(weather.Fvalue && ([weather.currentDescription rangeOfString:@"Sunny" options:NSCaseInsensitiveSearch].location != NSNotFound) < 42) {
+            UIImage *FreezingDrizzle1 = [UIImage imageNamed:@"FreezingDrizzle1.png"];
+            [_mamaSays setImage:FreezingDrizzle1];
         }
         //Cloudy or overcast
         else if(60 <= weather.Fvalue && (([weather.currentDescription rangeOfString:@"Clear" options:NSCaseInsensitiveSearch].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Cloudy" options:NSCaseInsensitiveSearch].location != NSNotFound) || ([weather.currentDescription rangeOfString:@"Overcast" options:NSCaseInsensitiveSearch].location != NSNotFound))) {
